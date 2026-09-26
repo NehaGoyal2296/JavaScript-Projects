@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Explore Canada</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            margin: 20px;
+        }
+
+        header {
+            background-color: #d62828;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-top: 15px;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+            margin: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        input, textarea {
+            margin: 5px;
+            padding: 8px;
+        }
+
+        /* Keep the original thumbnails and add a simple full-screen lightbox. */
+        #pictures img { cursor: pointer; }
+        #pictures img:focus-visible { outline: 3px solid #d62828; }
+        body.lightbox-open { overflow: hidden; }
+
+        #lightbox {
+            border: 0;
+            padding: 20px;
+            background: #222;
+            color: white;
+            text-align: center;
+            max-width: 90vw;
+            max-height: 90vh;
+            box-sizing: border-box;
+        }
+
+        #lightbox::backdrop { background: rgba(0, 0, 0, 0.85); }
+
+        #lightbox-image {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: calc(90vh - 220px);
+            margin: 15px auto;
+        }
+
+        #lightbox button {
+            padding: 10px 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Website Header -->
+    <header>
+        <h1>Explore Canada</h1>
+        <p>A simple website about the beautiful country of Canada</p>
+    </header>
+
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#places">Places</a>
+        <a href="#pictures">Pictures</a>
+        <a href="#video">Video</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+
+    <!-- Home Section -->
+    <section id="home">
+
+        <h2>Welcome to Canada!</h2>
+
+        <p>
+            Canada is a beautiful country with many interesting places to visit.
+            It is famous for its mountains, lakes, forests, cities, and waterfalls.
+        </p>
+
+        <p>
+            On this website, you can learn about some popular places in Canada
+            and see a few pictures and videos.
+        </p>
+
+    </section>
+
+
+    <!-- Places Section -->
+    <section id="places">
+
+        <h2>Popular Places in Canada</h2>
+
+        <h3>Niagara Falls</h3>
+
+        <p>
+            Niagara Falls is one of the most famous attractions in Canada.
+            It is located in Ontario and attracts many visitors every year.
+        </p>
+
+        <h3>Banff National Park</h3>
+
+        <p>
+            Banff is located in Alberta. It is famous for beautiful mountains,
+            lakes, and amazing natural scenery.
+        </p>
+
+        <h3>Toronto</h3>
+
+        <p>
+            Toronto is one of Canada's largest cities. The CN Tower is one of
+            its most famous landmarks.
+        </p>
+
+    </section>
+
+
+    <!-- Pictures Section -->
+    <section id="pictures">
+
+        <h2>Pictures of Canada</h2>
+
+        <p>Here are some pictures of beautiful places in Canada.</p>
+
+        <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=600&q=80"
+             alt="Mountains in Canada">
+
+        <img src="https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&fit=crop&w=600&q=80"
+             alt="Toronto skyline">
+
+    </section>
+
+
+    <!-- Video Section -->
+    <section id="video">
+
+        <h2>Canada Video</h2>
+
+        <p>
+            Watch this video to see some beautiful places in Canada.
+        </p>
+
+        <iframe width="560"
+                height="315"
+                src="https://www.youtube.com/embed/Scxs7L0vhZ4"
+                title="Canada Video"
+                allowfullscreen>
+        </iframe>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <p>
+            If you have any questions or suggestions, you can contact me
+            using the form below.
+        </p>
+
+        <form>
+
+            <label>Name:</label>
+            <br>
+
+            <input type="text" name="name">
+            <br><br>
+
+            <label>Email:</label>
+            <br>
+
+            <input type="email" name="email">
+            <br><br>
+
+            <label>Message:</label>
+            <br>
+
+            <textarea name="message" rows="5" cols="40"></textarea>
+            <br><br>
+
+            <input type="submit" value="Send">
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 Explore Canada</p>
+
+        <p>Created by a beginner web developer</p>
+
+    </footer>
+
+
+    <!-- The native dialog keeps keyboard focus inside the open lightbox. -->
+    <dialog id="lightbox" aria-label="Pictures of Canada" aria-describedby="lightbox-caption">
+        <button type="button" id="lightbox-close">Close</button>
+        <img id="lightbox-image" alt="">
+        <p id="lightbox-caption" aria-live="polite"></p>
+        <button type="button" id="lightbox-previous">Previous</button>
+        <button type="button" id="lightbox-next">Next</button>
+    </dialog>
+
+    <script src="./JS/one_page_website.js"></script>
+</body>
+
+</html>
