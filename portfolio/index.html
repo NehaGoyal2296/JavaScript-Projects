@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Neha Goyal's HTML, CSS and JavaScript course portfolio.">
+    <title>Neha Goyal | HTML, CSS &amp; JavaScript Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="portfolio.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b1f3a'/%3E%3Cpath d='M18 46V18h7l14 18V18h7v28h-7L25 28v18z' fill='%232dd4bf'/%3E%3C/svg%3E">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <!-- Navigation: each link jumps to a section with the matching id. -->
+    <header class="site-header">
+        <nav class="navigation page-width" aria-label="Main navigation">
+            <a class="logo" href="#home" aria-label="Neha Goyal home">NG<span>.</span></a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" hidden>Menu</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Home introduces Neha and provides clear links to her work. -->
+        <section class="hero" id="home">
+            <div class="hero-content page-width">
+                <div class="hero-copy">
+                    <p class="eyebrow">Welcome to my corner of the web</p>
+                    <h1>Hi, I’m <span>Neha Goyal.</span></h1>
+                    <p class="intro">Welcome to my portfolio, where I share the HTML, CSS and JavaScript projects I’ve created during my course.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#projects">View my projects</a>
+                        <a class="button button-secondary" href="https://github.com/NehaGoyal2296" target="_blank" rel="noopener noreferrer">Visit GitHub <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+
+                <!-- A code-inspired card adds visual interest without using a stock portrait. -->
+                <div class="code-card" aria-label="A simple HTML example introducing Neha">
+                    <div class="window-bar" aria-hidden="true">
+                        <span></span><span></span><span></span>
+                        <p>index.html</p>
+                    </div>
+                    <pre><code><span class="code-blue">&lt;main&gt;</span>
+  <span class="code-blue">&lt;h1&gt;</span>Hello, world!<span class="code-blue">&lt;/h1&gt;</span>
+  <span class="code-blue">&lt;p&gt;</span>
+    I’m learning to build
+    for the web.
+  <span class="code-blue">&lt;/p&gt;</span>
+<span class="code-blue">&lt;/main&gt;</span></code></pre>
+                    <p class="card-note">Learning, experimenting, and building one page at a time.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About uses only facts supported by the course repository. -->
+        <section class="section about" id="about">
+            <div class="page-width two-column">
+                <div>
+                    <p class="section-number">01 / About</p>
+                    <h2>A little about my journey.</h2>
+                </div>
+                <div class="about-copy">
+                    <p>I’m Neha, and I created this portfolio to bring my HTML, CSS and JavaScript coursework together in one place. Building each project has helped me understand how a webpage grows from a simple idea into something people can explore in a browser.</p>
+                    <p>I’m still learning, and that is part of the fun. These projects show the concepts I’ve practised so far—from organising content and styling layouts to adding navigation, images, forms, and responsive details.</p>
+                    <div class="learning-list" aria-label="Topics shown in the coursework">
+                        <span>Semantic HTML</span>
+                        <span>CSS styling</span>
+                        <span>Page layout</span>
+                        <span>Responsive basics</span>
+                        <span>JavaScript interactions</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects are based on folders found in Neha's course repository. -->
+        <section class="section projects" id="projects">
+            <div class="page-width">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-number">02 / Projects</p>
+                        <h2>What I’ve been building.</h2>
+                    </div>
+                    <a class="text-link" href="https://github.com/NehaGoyal2296/HTML-and-CSS-Projects" target="_blank" rel="noopener noreferrer">Open course repository <span aria-hidden="true">↗</span></a>
+                </div>
+
+                <div class="project-filters" aria-label="Filter projects" hidden>
+                    <button type="button" data-filter="all" aria-pressed="true">All projects</button>
+                    <button type="button" data-filter="javascript" aria-pressed="false">JavaScript</button>
+                    <button type="button" data-filter="html-css" aria-pressed="false">HTML &amp; CSS</button>
+                </div>
+                <p id="project-count" role="status"></p>
+                <div class="project-grid">
+                    <article class="project-card featured-project" data-category="javascript">
+                        <img class="project-image" src="images/theater-curtains.jpg" alt="Theater curtains from my Academy Cinemas project" width="600" height="300" loading="lazy">
+                        <p class="project-number">Project 01</p>
+                        <h3>Academy Cinemas</h3>
+                        <p>I built this movie-theater page to organise film listings, showtimes, and special deals in a responsive layout.</p>
+                        <ul class="project-tags" aria-label="Technologies and features">
+                            <li>HTML</li><li>CSS</li><li>Bootstrap</li><li>JavaScript</li>
+                        </ul>
+                        <a href="https://github.com/NehaGoyal2296/HTML-and-CSS-Projects/tree/main/academy-cinemas" target="_blank" rel="noopener noreferrer">View project files <span aria-hidden="true">↗</span></a>
+                    </article>
+
+                    <article class="project-card" data-category="javascript">
+                        <p class="project-number">Project 02</p>
+                        <h3>Explore Canada Lightbox</h3>
+                        <p>This one-page travel website introduces Canadian destinations. My JavaScript version adds an image lightbox with Previous, Next, Close, and keyboard controls.</p>
+                        <ul class="project-tags" aria-label="Technologies and features">
+                            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Lightbox</li>
+                        </ul>
+                        <a href="https://github.com/NehaGoyal2296/JavaScript-Projects/tree/main/One-Page%20Website" target="_blank" rel="noopener noreferrer">View project files <span aria-hidden="true">↗</span></a>
+                    </article>
+
+                    <article class="project-card" data-category="html-css">
+                        <img class="project-image" src="images/tortelloni.jpeg" alt="Tortelloni recipe from my Simple Recipes project" width="600" height="300" loading="lazy">
+                        <p class="project-number">Project 03</p>
+                        <h3>Simple Recipes</h3>
+                        <p>I used this recipe collection to explore sticky navigation, recipe cards, hover effects, and flip-card styling.</p>
+                        <ul class="project-tags" aria-label="Technologies and features">
+                            <li>HTML</li><li>CSS</li><li>Flexbox</li><li>Hover effects</li>
+                        </ul>
+                        <a href="https://github.com/NehaGoyal2296/HTML-and-CSS-Projects/tree/main/Simple-Recipes" target="_blank" rel="noopener noreferrer">View project files <span aria-hidden="true">↗</span></a>
+                    </article>
+
+                    <article class="project-card" data-category="html-css">
+                        <img class="project-image" src="images/dog.png" alt="Dog image from my Pet Shop project" width="600" height="300" loading="lazy">
+                        <p class="project-number">Project 04</p>
+                        <h3>The Pet Shop</h3>
+                        <p>This multi-page pet website gave me practice connecting pages and organising animal categories, images, video, and contact details.</p>
+                        <ul class="project-tags" aria-label="Technologies and features">
+                            <li>HTML</li><li>Multiple pages</li><li>Images</li><li>Forms</li>
+                        </ul>
+                        <a href="https://github.com/NehaGoyal2296/HTML-and-CSS-Projects/tree/main/The-Pet-Shop-Website" target="_blank" rel="noopener noreferrer">View project files <span aria-hidden="true">↗</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact uses GitHub because no email address was provided. -->
+        <section class="section contact" id="contact">
+            <div class="page-width contact-panel">
+                <div class="contact-intro">
+                    <p class="section-number">03 / Contact</p>
+                    <h2>Thanks for stopping by.</h2>
+                    <p>If you’d like to see more of my coursework, you can find me on GitHub. You can also try the form to see how I’ve styled different HTML fields.</p>
+                    <a class="button button-light" href="https://github.com/NehaGoyal2296" target="_blank" rel="noopener noreferrer">Say hello on GitHub <span aria-hidden="true">↗</span></a>
+                </div>
+
+                <!-- A real submission destination can be added later with the form action attribute. -->
+                <form class="contact-form" novalidate aria-describedby="form-note">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required maxlength="100" aria-describedby="name-error">
+                        <p class="field-error" id="name-error"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required maxlength="254" aria-describedby="email-error">
+                        <p class="field-error" id="email-error"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here" required minlength="10" maxlength="2000" aria-describedby="message-error"></textarea>
+                        <p class="field-error" id="message-error"></p>
+                    </div>
+
+                    <button class="form-button" type="submit" disabled>Check message</button>
+                    <p id="form-status" role="status" tabindex="-1"></p>
+                    <noscript>Enable JavaScript to check this practice form. Messages are not sent.</noscript>
+                    <p class="form-note" id="form-note">This practice form validates your entries locally. It does not send or save messages because no backend is configured. Please use GitHub to get in touch.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- The footer repeats the most useful links and gives the page a strong finish. -->
+    <footer class="site-footer">
+        <div class="page-width footer-main">
+            <div class="footer-brand">
+                <a class="footer-logo" href="#home" aria-label="Return to the top">NG<span>.</span></a>
+                <p>Learning, creating, and growing through HTML, CSS and JavaScript.</p>
+            </div>
+
+            <div class="footer-links">
+                <p class="footer-heading">Explore</p>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-links">
+                <p class="footer-heading">Find me</p>
+                <span class="profile-placeholder">LinkedIn — add your profile URL</span>
+                <a href="https://github.com/NehaGoyal2296" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/NehaGoyal2296/HTML-and-CSS-Projects" target="_blank" rel="noopener noreferrer">Course projects <span aria-hidden="true">↗</span></a>
+            </div>
+        </div>
+
+        <div class="page-width footer-bottom">
+            <p>© 2026 Neha Goyal. Built with HTML, CSS &amp; JavaScript.</p>
+            <a class="back-to-top" href="#home">Back to top <span aria-hidden="true">↑</span></a>
+        </div>
+    </footer>
+</body>
+</html>
+
